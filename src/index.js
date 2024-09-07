@@ -20,8 +20,9 @@ import './styles.css';  // Only import the CSS file
 }());
 
 
-/*(function setDefaultHeroImage() {
-    let heroImgDiv = document.getElementById("pageImg");
+/*(function setUpHomePage() {
+    let contentDiv = document.getElementById("content");
+    let 
 
 
     heroImgDiv.style.backgroundImage = `url(${foodImage})`;
