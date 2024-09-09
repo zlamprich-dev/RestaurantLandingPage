@@ -1,22 +1,20 @@
 import foodImage from './assets/images/food.jpg';
 import drinksImage from './assets/images/drinks.jpg';
 import partyImage from './assets/images/party.jpg';
-import './styles.css'; 
+import './css/styles.css';
 
 (function createHeroImage() {
-    let contentPane = document.getElementById("content");
-    let heroImgDiv = document.createElement("div");
+    let contentHeroImg = document.getElementById("content");
 
-    heroImgDiv.style.backgroundImage = `url(${foodImage})`;
-    heroImgDiv.style.backgroundSize = 'cover';
-    heroImgDiv.style.width = '100%';
-    heroImgDiv.style.height = '100vh';
-    heroImgDiv.style.margin = '0px';
-    heroImgDiv.style.padding = '0px';
-    heroImgDiv.style.overflow = 'hidden';
-    heroImgDiv.setAttribute('id', 'heroImg')
+    contentHeroImg.style.backgroundImage = `url(${foodImage})`;
+    contentHeroImg.style.backgroundSize = 'cover';
+    contentHeroImg.style.width = '100%';
+    contentHeroImg.style.height = '100vh';
+    contentHeroImg.style.margin = '0px';
+    contentHeroImg.style.padding = '0px';
+    contentHeroImg.style.overflow = 'hidden';
+    contentHeroImg.setAttribute('id', 'heroImg')
 
-    contentPane.append(heroImgDiv);
 }());
 
 
@@ -37,5 +35,25 @@ import './styles.css';
     contactLink.addEventListener('click', () => {
         img.style.backgroundImage = `url(${partyImage})`;
     });
-    
+
 }());
+
+function loadCSS(file) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = file;
+    document.head.appendChild(link)
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname;
+
+    if (path === '/' || path === '/index.html') {
+        loadCSS('homePageCSS.css');
+    } else if (path === '/menu.html') {
+        loadCSS('menuPageCSS.css');
+    } else if (path === '/contact.html') {
+        loadCSS('contactPageCSS.css')
+    }
+});

@@ -4,15 +4,32 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: {
+        index: './src/index.js', // Main entry point
+        home: './src/js/homePage.js',
+        about: './src/js/menuPage.js',
+        contact: './src/js/contactPage.js'
+    },
     output: {
-        filename: "main.js",
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/template.html",
+            filename: 'home.html',
+            template: "./src/html/home.html",
+            chunks: ['home']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'menu.html',
+            template: "./src/html/menu.html",
+            chunks: ['menu']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: "./src/html/contact.html",
+            chunks: ['contact']
         }),
     ],
     module: {
