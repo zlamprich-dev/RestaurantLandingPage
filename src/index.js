@@ -1,7 +1,7 @@
 import foodImage from './assets/images/food.jpg';
 import drinksImage from './assets/images/drinks.jpg';
 import partyImage from './assets/images/party.jpg';
-import './styles.css';  // Only import the CSS file
+import './styles.css'; 
 
 (function createHeroImage() {
     let contentPane = document.getElementById("content");
@@ -20,19 +20,22 @@ import './styles.css';  // Only import the CSS file
 }());
 
 
-/*(function setUpHomePage() {
-    let contentDiv = document.getElementById("content");
-    let 
+(function setHeroImage() {
+    let img = document.getElementById("heroImg")
+    let homeLink = document.getElementById("homeLink");
+    let menuLink = document.getElementById("menuLink");
+    let contactLink = document.getElementById("contactLink");
 
+    homeLink.addEventListener('click', () => {
+        img.style.backgroundImage = `url(${foodImage})`;
+    });
 
-    heroImgDiv.style.backgroundImage = `url(${foodImage})`;
-    heroImgDiv.style.backgroundSize = 'cover';
-    heroImgDiv.style.width = '100%';
-    heroImgDiv.style.height = '100vh';
-    heroImgDiv.style.margin = '0px';
-    heroImgDiv.style.padding = '0px';
-    heroImgDiv.style.overflow = 'hidden';
+    menuLink.addEventListener('click', () => {
+        img.style.backgroundImage = `url(${drinksImage})`;
+    });
 
-
-    return heroImgDiv;
-}())*/
+    contactLink.addEventListener('click', () => {
+        img.style.backgroundImage = `url(${partyImage})`;
+    });
+    
+}());
