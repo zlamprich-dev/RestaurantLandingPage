@@ -1,41 +1,37 @@
-import foodImage from './assets/images/food.jpg';
-import drinksImage from './assets/images/drinks.jpg';
-import partyImage from './assets/images/party.jpg';
-import './css/styles.css'; // Always import base styles
+import './css/styles.css'
 
 document.addEventListener('DOMContentLoaded', () => {
-    (function createHeroImage() {
-        let contentHeroImg = document.getElementById("content");
+    const contentDiv = document.getElementById('content'); // The container where tab content will go
+    const homeLink = document.getElementById('homeLink');
+    const menuLink = document.getElementById('menuLink');
+    const contactLink = document.getElementById('contactLink');
 
-        contentHeroImg.style.backgroundImage = `url(${foodImage})`;
-        contentHeroImg.style.backgroundSize = 'cover';
-        contentHeroImg.style.width = '100%';
-        contentHeroImg.style.height = '100vh';
-        contentHeroImg.style.margin = '0px';
-        contentHeroImg.style.padding = '0px';
-        contentHeroImg.style.overflow = 'hidden';
-        contentHeroImg.setAttribute('id', 'heroImg')
+    // Function clears the current tab content
+    function clearContent() {
+        contentDiv.innerHTML = ''; // Removes existing content
+    }
 
-    }());
+    // Event Listeners for tab switching
+    homeLink.addEventListener('click', (event) => {
+        event.preventDefault();  // Prevents default anchor behavior
+        clearContent();  // Clears current content
+        contentDiv.appendChild(homeTab());  // Loads Home content
+    });
 
-    (function setHeroImage() {
-        let img = document.getElementById("heroImg");
-        let homeLink = document.getElementById("homeLink");
-        let menuLink = document.getElementById("menuLink");
-        let contactLink = document.getElementById("contactLink");
+    menuLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        clearContent();
+        contentDiv.appendChild(menuTab());  // Loads Menu content
+    });
 
-        homeLink.addEventListener('click', () => {
-            img.style.backgroundImage = `url(${foodImage})`;
-        });
+    contactLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        clearContent();
+        contentDiv.appendChild(contactTab());  // Loads Contact content
+    });
 
-        menuLink.addEventListener('click', () => {
-            img.style.backgroundImage = `url(${drinksImage})`;
-        });
+    // Loads the home page tab by default
+    clearContent();
+    contentDiv.appendChild(homeTab());
+});
 
-        contactLink.addEventListener('click', () => {
-            img.style.backgroundImage = `url(${partyImage})`;
-        });
-
-    }());
-
-})

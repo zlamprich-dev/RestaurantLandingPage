@@ -18,19 +18,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'home.html',
-            template: './src/html/home.html',
+            template: './src/home.html',
             chunks: ['home', 'index'] // Includes home.bundle.js and index.bundle.js
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'menu.html',
-            template: './src/html/menu.html',
-            chunks: ['menu', 'index'] // Includes menu.bundle.js and index.bundle.js
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'contact.html',
-            template: './src/html/contact.html',
-            chunks: ['contact', 'index'] // Includes contact.bundle.js and index.bundle.js
-        }),
+        })
     ],
     devServer: {
         static: {
