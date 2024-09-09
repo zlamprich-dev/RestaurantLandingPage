@@ -7,7 +7,7 @@ module.exports = {
     entry: {
         index: './src/index.js', // Main entry point
         home: './src/js/homePage.js',
-        about: './src/js/menuPage.js',
+        menu: './src/js/menuPage.js',
         contact: './src/js/contactPage.js'
     },
     output: {
@@ -24,7 +24,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'menu.html',
             template: './src/html/menu.html',
-            chunks: ['about', 'index'] // Includes menu.bundle.js and index.bundle.js
+            chunks: ['menu', 'index'] // Includes menu.bundle.js and index.bundle.js
         }),
         new HtmlWebpackPlugin({
             filename: 'contact.html',
