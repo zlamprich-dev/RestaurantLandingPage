@@ -1,7 +1,8 @@
 import foodImage from './assets/images/food.jpg';
 import drinksImage from './assets/images/drinks.jpg';
 import partyImage from './assets/images/party.jpg';
-import './css/styles.css';
+import './css/styles.css'; // Always import base styles
+import './css/homePageCSS.css'
 
 (function createHeroImage() {
     let contentHeroImg = document.getElementById("content");
@@ -17,9 +18,8 @@ import './css/styles.css';
 
 }());
 
-
 (function setHeroImage() {
-    let img = document.getElementById("heroImg")
+    let img = document.getElementById("heroImg");
     let homeLink = document.getElementById("homeLink");
     let menuLink = document.getElementById("menuLink");
     let contactLink = document.getElementById("contactLink");
@@ -37,23 +37,3 @@ import './css/styles.css';
     });
 
 }());
-
-function loadCSS(file) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = file;
-    document.head.appendChild(link)
-
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const path = window.location.pathname;
-
-    if (path === '/' || path === '/index.html') {
-        loadCSS('homePageCSS.css');
-    } else if (path === '/menu.html') {
-        loadCSS('menuPageCSS.css');
-    } else if (path === '/contact.html') {
-        loadCSS('contactPageCSS.css')
-    }
-});

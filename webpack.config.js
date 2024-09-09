@@ -18,20 +18,33 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'home.html',
-            template: "./src/html/home.html",
-            chunks: ['home']
+            template: './src/html/home.html',
+            chunks: ['home', 'index'] // Includes home.bundle.js and index.bundle.js
         }),
         new HtmlWebpackPlugin({
             filename: 'menu.html',
-            template: "./src/html/menu.html",
-            chunks: ['menu']
+            template: './src/html/menu.html',
+            chunks: ['about', 'index'] // Includes menu.bundle.js and index.bundle.js
         }),
         new HtmlWebpackPlugin({
             filename: 'contact.html',
-            template: "./src/html/contact.html",
-            chunks: ['contact']
+            template: './src/html/contact.html',
+            chunks: ['contact', 'index'] // Includes contact.bundle.js and index.bundle.js
         }),
     ],
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 8080,
+        historyApiFallback: {
+            rewrites: [
+                { from: /^\/$/, to: '/home.html' } // points root path to home.html
+            ]
+        },
+        open: true // Opens the browser after server has been started
+    },
     module: {
         rules: [
             {
