@@ -1,37 +1,42 @@
-import './css/styles.css'
+import { setHeroImage, setHomeTabContent } from './js/homePage';
+import menuTab from './js/menuPage';
+import contactTab from './js/contactPage';
+import './css/styles.css';
+import './css/homePageCSS.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const contentDiv = document.getElementById('content'); // The container where tab content will go
+    const contentDiv = document.getElementById('content'); // The container for tab content
     const homeLink = document.getElementById('homeLink');
     const menuLink = document.getElementById('menuLink');
     const contactLink = document.getElementById('contactLink');
 
-    // Function clears the current tab content
+    // Function to clear the current tab content
     function clearContent() {
         contentDiv.innerHTML = ''; // Removes existing content
     }
 
-    // Event Listeners for tab switching
+    // Event listeners for tab switching
     homeLink.addEventListener('click', (event) => {
-        event.preventDefault();  // Prevents default anchor behavior
+        event.preventDefault();  // Prevent default anchor behavior
         clearContent();  // Clears current content
-        contentDiv.appendChild(homeTab());  // Loads Home content
+        setHeroImage();  // Load hero image for Home tab
+        setHomeTabContent();  // Load Home tab content
     });
 
     menuLink.addEventListener('click', (event) => {
         event.preventDefault();
         clearContent();
-        contentDiv.appendChild(menuTab());  // Loads Menu content
+        //menuTab();  // Loads Menu content
     });
 
     contactLink.addEventListener('click', (event) => {
         event.preventDefault();
         clearContent();
-        contentDiv.appendChild(contactTab());  // Loads Contact content
+        //contactTab();  // Loads Contact content
     });
 
-    // Loads the home page tab by default
+    // Load the Home page tab by default on initial page load
     clearContent();
-    contentDiv.appendChild(homeTab());
+    setHeroImage();  // Ensure hero image shows on page load
+    setHomeTabContent();  // Load the Home content by default
 });
-
