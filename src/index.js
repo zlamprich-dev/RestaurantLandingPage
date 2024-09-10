@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();  // Prevent default anchor behavior
         clearContent();
         setHeroImage(foodImage);
+        createHomeContentOverlay()
     });
 
     menuLink.addEventListener('click', (event) => {
@@ -41,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     setHeroImage(foodImage);
-    createHomeContentOverlay()
 
 });
 
@@ -60,7 +60,6 @@ function setHeroImage(img) {
     heroImgDiv.style.margin = '0px';
     heroImgDiv.style.padding = '0px';
     heroImgDiv.style.overflow = 'hidden';
-
 }
 
 

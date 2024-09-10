@@ -1,18 +1,5 @@
 import '../css/homePageCSS.css'
 
-export function setHomeTabContent() {
-    let link = document.getElementById('homeLink');
-
-
-
-    link.addEventListener('click', () => {
-        setHeroImage();
-        createHomeContentOverlay()
-
-    })
-
-
-}
 export function createHomeContentOverlay() {
     let homeContentDiv = document.createElement('div')
     homeContentDiv.setAttribute('id', 'homeContentDiv')
