@@ -1,0 +1,32 @@
+#homeContentDiv {
+    display: flex;
+    width: 80%;
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0.863);
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+#textHeader {
+    font-style: italic;
+    margin: 0px;
+    font-size: 40px;
+    color: white;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5%;
+}
+
+#sloganContent {
+    font-size: 18px;
+    color: white;
+    margin-top: 5%;
+}
+
+#textContent {
+    font-size: 24px;
+    color: white;
+    margin-top: 0px;
+}

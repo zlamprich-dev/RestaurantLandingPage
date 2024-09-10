@@ -1,4 +1,4 @@
-import { createContentOverlay } from './js/homePage';
+import { createHomeContentOverlay } from './js/homePage';
 import foodImage from './assets/images/food.jpg'
 import partyImage from './assets/images/party.jpg'
 import drinksImage from './assets/images/drinks.jpg'
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     setHeroImage(foodImage);
-    createContentOverlay()
+    createHomeContentOverlay()
 
 });
 
