@@ -9,37 +9,33 @@ export function setHomeTabContent() {
 
 
     link.addEventListener('click', () => {
+        setHeroImage();
+        createContentOverlay()
 
     })
 
-    setHeroImage();
-    setNewContent();
+
 }
-
-export function setHeroImage() {
-    let imgElement = document.createElement('div');
-    imgElement.setAttribute('id', 'heroImg');
-    content.append(imgElement);
-
-    let heroImgDiv = document.getElementById('heroImg');
-
-    heroImgDiv.style.backgroundImage = `url(${foodImage})`;
-    heroImgDiv.style.backgroundSize = 'cover';
-    heroImgDiv.style.width = '100%';
-    heroImgDiv.style.height = '100vh';
-    heroImgDiv.style.margin = '0px';
-    heroImgDiv.style.padding = '0px';
-    heroImgDiv.style.overflow = 'hidden';
-
-    
-}
-
-function setNewContent() {
+export function createContentOverlay() {
     let homeContentDiv = document.createElement('div')
     homeContentDiv.setAttribute('id', 'homeContentDiv')
-    content.append(homeContentDiv)
+    let heroImgDiv = document.getElementById('heroImg')
+    heroImgDiv.append(homeContentDiv)
+
+    homeContentDiv.style.display = 'flex';
+    homeContentDiv.style.width = '80%';
+    homeContentDiv.style.height = '75%';
+    homeContentDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.863)';
+    homeContentDiv.style.margin = 'auto'
+    homeContentDiv.style.marginTop = '10%'
+    homeContentDiv.style.borderRadius = '10px'
+    homeContentDiv.style.justifyContent = 'center'
 
     let textHeader = document.createElement('p');
     textHeader.setAttribute('id', 'textHeader');
+    textHeader.textContent = 'THIS IS A TEST'
+    textHeader.style.fontSize = '40px'
+    textHeader.style.color = 'white'
 
+    homeContentDiv.append(textHeader)
 }
