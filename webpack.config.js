@@ -45,6 +45,18 @@ module.exports = {
                 test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.mp4$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "video"
+                        }
+                    }
+                ]
+            }
         ],
     },
 };

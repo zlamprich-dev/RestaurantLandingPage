@@ -117,8 +117,52 @@ nav a:hover {
 
 .navLinks {
     margin: 10px;
-    font-size: 25px;
+    font-size: 30px;
     letter-spacing: 3px;
     font-family: 'Awaken';
-    font-weight: bolder;
+    font-weight: bold;
+}
+
+
+#homeOverlay {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.863);
+    margin: auto;
+    margin-top: 0%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#overlayImageContainer {
+    display: flex;
+    background-color: transparent;
+    height: 60vh;
+    width: 80vw;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#imageOne {
+    background-image: url('../assets/images/ambitious-studio.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin-right: 5px;
+    background-position-y: -20vh;
+    border-radius: 8px;
+}
+
+#imageTwo {
+    background-image: url('../assets/images/frames-for-your-heart.jpg');
+    margin-left: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position-y: -20vh;
+    border-radius: 8px;
 }

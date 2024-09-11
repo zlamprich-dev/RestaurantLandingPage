@@ -19,7 +19,7 @@ export function createHomeContentOverlay() {
 
     let sloganContent = document.createElement('p');
     sloganContent.setAttribute('id', 'sloganContent');
-    sloganContent.textContent = 'Where Every Bite Feels Like Home'
+    sloganContent.textContent = 'Where Every Bite Feels Like Home. Period.'
 
 
     let textContent = document.createElement('p');
