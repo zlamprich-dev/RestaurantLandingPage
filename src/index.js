@@ -1,4 +1,5 @@
 import { createHomeContentOverlay } from './js/homePage';
+import { createMenuContentOverlay } from './js/menuPage';
 import foodImage from './assets/images/food.jpg'
 import partyImage from './assets/images/party.jpg'
 import drinksImage from './assets/images/drinks.jpg'
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         clearContent();
         setHeroImage(drinksImage);
+        createMenuContentOverlay();
 
     });
 

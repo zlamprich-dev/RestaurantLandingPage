@@ -1,4 +1,4 @@
-import '../css/homePageCSS.css'
+import '../css/menuPageCSS.css'
 import aboutPicture from '../assets/images/relax.jpg'
 
 export function createHomeContentOverlay() {
