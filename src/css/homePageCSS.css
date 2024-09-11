@@ -38,7 +38,7 @@
 }
 
 #sloganContent {
-    font-size: 14px;
+    font-size: 18px;
     color: white;
     margin-top: 10px;
     font-style: italic;
@@ -58,10 +58,10 @@
 }
 
 #homeContentImage {
-    margin-top: 5%;
+    margin-top: 10px;
     background-image: url('../assets/images/relax.jpg');
-    width: 70%;
-    height: 30vh;
+    width: 80%;
+    height: 35vh;
     background-size: cover;
     border-radius: 8px;
 }
