@@ -101,7 +101,6 @@ a:hover {
 }
 
 #heroImg {
-    background-position-x: -20vw;
     animation: fadeIn 1.25s;
     -webkit-animation: fadeIn 1.25s;
     -moz-animation: fadeIn 1.25s;
@@ -120,13 +119,14 @@ a:hover {
     display: flex;
     font-family: 'BebasNeue';
     justify-content: center;
-    height: 10vh;
+    height: fit-content;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.982);
 }
 
 #headerTitle {
     color: white;
+    padding-top: 1%;
     margin: auto;
     text-align: center;
     font-family: 'AwakenSteel';

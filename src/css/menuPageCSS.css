@@ -1,0 +1,54 @@
+#menuContentDiv {
+    display: flex;
+    width: 95%;
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.883);
+    color: white;
+    margin: auto;
+    margin-top: 0%;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+}
+
+
+
+#heroImg {
+    animation: fadeIn 1.25s;
+    -webkit-animation: fadeIn 1.25s;
+    -moz-animation: fadeIn 1.25s;
+    -o-animation: fadeIn 1.25s;
+    -ms-animation: fadeIn 1.25s;
+}
+
+
+/* Ensure that long words wrap and don't overflow */
+h2,
+h3,
+p {
+    word-wrap: break-word;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    #menuContentDiv {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
