@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const homeLink = document.getElementById('homeLink');
     const menuLink = document.getElementById('menuLink');
     const aboutLink = document.getElementById('aboutLink')
-    const contactLink = document.getElementById('contactLink');
 
     // Function to clear the current tab content
     function clearContent() {
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutLink.addEventListener('click', (event) => {
         event.preventDefault();  // Prevent default anchor behavior
         clearContent();
-        setHeroImage(foodImage);
+        setHeroImage(partyImage);
         createHomeContentOverlay()
     });
 
@@ -43,17 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    contactLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        clearContent();
-        setHeroImage(partyImage);
-
-    });
-
-
     setHeroImage(foodImage);
     createHomePage()
-
 });
 
 

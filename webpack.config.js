@@ -8,7 +8,6 @@ module.exports = {
         index: './src/index.js', // Main entry point
         home: './src/js/homePage.js',
         menu: './src/js/menuPage.js',
-        contact: './src/js/contactPage.js'
     },
     output: {
         filename: '[name].bundle.js',
