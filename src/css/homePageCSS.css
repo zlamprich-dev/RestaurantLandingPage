@@ -1,32 +1,67 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url('../assets/fonts/BebasNeue.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AwakenSteel';
+    src: url('../assets/fonts/AWAKENNING\ STEEL\ Personal\ Use.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Awaken';
+    src: url('../assets/fonts/AWAKENNING\ Personal\ Use.ttf') format('truetype');
+}
+
 #homeContentDiv {
     display: flex;
-    width: 80%;
-    height: 75%;
+    width: 65%;
+    height: fit-content;
     background-color: rgba(0, 0, 0, 0.863);
     margin: auto;
-    margin-top: 10%;
+    margin-top: 3%;
     border-radius: 10px;
     align-items: center;
     flex-direction: column;
+
 }
 
 #textHeader {
     font-style: italic;
-    margin: 0px;
+    margin: 10px;
     font-size: 40px;
     color: white;
     text-decoration-line: underline;
     text-decoration-thickness: 5%;
+    letter-spacing: 5px;
+    font-family: 'AwakenSteel';
 }
 
 #sloganContent {
-    font-size: 18px;
+    font-size: 14px;
     color: white;
     margin-top: 10px;
+    font-style: italic;
+    font-family: 'Awaken';
+    letter-spacing: 3px;
+
 }
 
 #textContent {
-    font-size: 24px;
+    font-family: 'BebasNeue';
+    font-size: 20px;
     color: white;
     margin-top: 20px;
+    max-width: 50%;
+    letter-spacing: 4px;
+
+}
+
+#homeContentImage {
+    margin-top: 5%;
+    background-image: url('../assets/images/relax.jpg');
+    width: 70%;
+    height: 30vh;
+    background-size: cover;
+    border-radius: 8px;
 }
