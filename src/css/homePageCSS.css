@@ -65,19 +65,13 @@
 
 #homeContentDiv {
     display: flex;
-    width: 65%;
-    height: fit-content;
+    width: 95%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.863);
     margin: auto;
-    margin-top: 3%;
-    border-radius: 10px;
+    margin-top: 0%;
     align-items: center;
     flex-direction: column;
-    animation: fadeIn 1s;
-    -webkit-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -o-animation: fadeIn 1s;
-    -ms-animation: fadeIn 1s;
 
 }
 
@@ -119,4 +113,9 @@
     height: 35vh;
     background-size: cover;
     border-radius: 8px;
+    animation: fadeIn 1.25s;
+    -webkit-animation: fadeIn 1.25s;
+    -moz-animation: fadeIn 1.25s;
+    -o-animation: fadeIn 1.25s;
+    -ms-animation: fadeIn 1.25s;
 }
